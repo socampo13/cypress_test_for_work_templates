@@ -23,3 +23,5 @@ npx cypress open
 
 Ejecutar Cypress en modo headless (sin interfaz gráfica):
 npx cypress run
+
+Cypress documentation: https://docs.cypress.io/guides/overview/why-cypress
