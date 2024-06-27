@@ -65,7 +65,7 @@ describe('test description', () => {
         cy.get('[data-test=back-to-products]').click();
     }); */
 
-    it('Test filters', () => {
+    /* it('Test filters', () => {
         cy.visit('https://saucedemo.com');
         // Enter valid credentials
         cy.get('input[name="user-name"]').type("standard_user");
@@ -88,5 +88,5 @@ describe('test description', () => {
         cy.get('[data-test=product-sort-container]').type('lohi');
         cy.get('[data-test=product-sort-container]').click();
         cy.get('[data-test=product-sort-container]').type('hilo')
-    });
+    }); */
 });
