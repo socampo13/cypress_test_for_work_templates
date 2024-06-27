@@ -10,7 +10,18 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+/* //Cypress.Commands.add('login', (email, password) => {
+    cy.request({
+        method: 'POST',
+        url: 'https://saucedemo.com',
+        body: {
+            username: 'standard_user',
+            password: 'secret_sauce'
+        }
+    }).then((resp) => {
+        window.localStorage.setItem('authToken', resp.body.token);
+    });
+}); */
 //
 //
 // -- This is a child command --
