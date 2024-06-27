@@ -10,7 +10,7 @@ describe('test description', () => {
        }
        cy.visit('https://saucedemo.com');
     }); */
-    it("should successfully log in with valid credentials", () => {
+    it("should successfully add and remove items from the cart", () => {
         cy.visit('https://saucedemo.com');
         // Enter valid credentials
         cy.get('input[name="user-name"]').type("standard_user");
@@ -34,7 +34,7 @@ describe('test description', () => {
         cy.get('[data-test=continue-shopping]').click();
     });
 
-    it('should add an item to the cart', () => {
+   /*  it('should add an item to the cart', () => {
         cy.visit('https://saucedemo.com');
         // Enter valid credentials
         cy.get('input[name="user-name"]').type("standard_user");
@@ -63,5 +63,30 @@ describe('test description', () => {
         cy.get('[data-test=continue]').click();
         cy.get('[data-test=finish]').click();
         cy.get('[data-test=back-to-products]').click();
+    }); */
+
+    it('Test filters', () => {
+        cy.visit('https://saucedemo.com');
+        // Enter valid credentials
+        cy.get('input[name="user-name"]').type("standard_user");
+        cy.get('input[name="password"]').type("secret_sauce"); 
+    
+        // Click the login button
+        cy.get('input[type="submit"]').click();
+    
+        // Assert that the URL changes to the dashboard or home page
+        cy.url().should("include", "/inventory.html");
+    
+        // Optionally, you can also assert that a specific element on the dashboard page is visible
+        cy.get(".inventory_list").should("be.visible");
+
+        cy.get('[data-test=product-sort-container]').click();
+        cy.get('[data-test=product-sort-container]').type('az');
+        cy.get('[data-test=product-sort-container]').click();
+        cy.get('[data-test=product-sort-container]').type('za');
+        cy.get('[data-test=product-sort-container]').click();
+        cy.get('[data-test=product-sort-container]').type('lohi');
+        cy.get('[data-test=product-sort-container]').click();
+        cy.get('[data-test=product-sort-container]').type('hilo')
     });
 });
