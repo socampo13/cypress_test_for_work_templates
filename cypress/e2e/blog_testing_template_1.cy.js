@@ -2,13 +2,13 @@ https://barkley-hq-39951248.hubspotpagebuilder.com/blog
 //ALWAYS TAKE INTO ACCOUNT THE SLUGS TO AVOID ISSUES AND NOT WANTED ERRORS
 describe('Test Blog Listing templates functionalities', () => {
 
-    const baseUrl = 'https://barkley-hq-39951248.hubspotpagebuilder.com/blog' //The baseUrl should be the URL from the LISTING page. Only change URL commented lines that explains it
-    const baseSearch = 'https://barkley-hq-39951248.hubspotpagebuilder.com/hs-search-results' //The baseSearch should be the URL from the SEARCH page. Only change URL commented lines that explains it
-    const basePage2 = 'https://barkley-hq-39951248.hubspotpagebuilder.com/blog/page/2' // only need to change https://45763993.hs-sites.com
-    const basePage3 = 'https://barkley-hq-39951248.hubspotpagebuilder.com/blog/page/3' // https://45763993.hs-sites.com
+    const baseUrl = 'https://39951248.hs-sites.com/blog' //The baseUrl should be the URL from the LISTING page. Only change URL commented lines that explains it
+    const baseSearch = 'https://39951248.hs-sites.com/hs-search-results' //The baseSearch should be the URL from the SEARCH page. Only change URL commented lines that explains it
+    const basePage2 = 'https://39951248.hs-sites.com/blog/page/2' // only need to change https://45763993.hs-sites.com
+    const basePage3 = 'https://39951248.hs-sites.com/blog/page/3' // https://45763993.hs-sites.com
     const basePost = 'https://39951248.fs1.hubspotusercontent-na1.net/hubfs/39951248/Imported_Blog_Media/boost-website.jpg' // Just change the URL comming from one of the post in the listing page
-    const basePostInside = 'https://barkley-hq-39951248.hubspotpagebuilder.com/blog/journey-continues' // URL from the post that was previously clicked
-    const nextPagePost = 'https://barkley-hq-39951248.hubspotpagebuilder.com/blog/shaping-web-content-future' // URL from the post that comes after clicking the "next article >" button
+    const basePostInside = 'https://39951248.hs-sites.com/blog//journey-continues' // URL from the post that was previously clicked
+    const nextPagePost = 'https://39951248.hs-sites.com/blog//shaping-web-content-future' // URL from the post that comes after clicking the "next article >" button
     
     it('Search bar is working properly', () => {
         cy.visit(baseUrl);
