@@ -1,0 +1,18 @@
+Cypress.config('pageLoadTimeout', 60000);
+
+describe('Page Load Time Test', () => {
+    it('should measure page load time and assert it is less than 10 seconds', () => {
+      const startTime = Date.now();
+  
+      cy.visit('https://spelmanlogistics.com/');
+  
+      cy.window().then(() => {
+        const endTime = Date.now();
+        const loadTime = endTime - startTime;
+  
+        cy.log(`Page loaded in ${loadTime} ms`);
+        expect(loadTime).to.be.lessThan(10000); // Assert that the load time is less than 10 seconds
+      });
+    });
+  });
+  
