@@ -1,4 +1,4 @@
-const MyClass = require("../javascript-code/objects");
+const MyClass = require("../../javascript-code/objects");
 
 describe("Testing object oriented code", () => {
   let instance;
