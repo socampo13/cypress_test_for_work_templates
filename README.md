@@ -18,10 +18,6 @@ npm install
 ### Uso
 Para ejecutar las pruebas, puedes usar los siguientes comandos:
 
-Ejecutar Cypress en modo interactivo:
-npx cypress open
-
-Ejecutar Cypress en modo headless (sin interfaz gráfica):
-npx cypress run
+npm run cy:open
 
 Cypress documentation: https://docs.cypress.io/guides/overview/why-cypress
