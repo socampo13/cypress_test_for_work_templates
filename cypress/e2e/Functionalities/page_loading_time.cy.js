@@ -4,7 +4,7 @@ describe('Page Load Time Test', () => {
     it('should measure page load time and assert it is less than 10 seconds', () => {
       const startTime = Date.now();
   
-      cy.visit('https://spelmanlogistics.com/');
+      cy.visit('https://www.evettfield.com/terms-of-use/');
   
       cy.window().then(() => {
         const endTime = Date.now();
