@@ -23,6 +23,7 @@ describe('Test functionality of the pillar page', () => {
       cy.scrollTo('bottom');
       cy.scrollTo('center');
       cy.wait(2000);
+      
       cy.get('.scroll-top__button').click();
    });
 });
