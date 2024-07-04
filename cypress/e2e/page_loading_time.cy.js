@@ -1,4 +1,4 @@
-Cypress.config('pageLoadTimeout', 60000);
+Cypress.config('pageLoadTimeout', 30000);
 
 describe('Page Load Time Test', () => {
     it('should measure page load time and assert it is less than 10 seconds', () => {
@@ -11,7 +11,7 @@ describe('Page Load Time Test', () => {
         const loadTime = endTime - startTime;
   
         cy.log(`Page loaded in ${loadTime} ms`);
-        expect(loadTime).to.be.lessThan(10000); // Assert that the load time is less than 10 seconds
+        expect(loadTime).to.be.lessThan(7000); // Assert that the load time is less than 10 seconds
       });
     });
   });
