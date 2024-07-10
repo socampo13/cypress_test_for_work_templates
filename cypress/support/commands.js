@@ -34,3 +34,14 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+const XLSX = require('xlsx')
+
+Cypress.Commands.add('readExcelFile', (filePath) => {
+    return cy.readFile(filePath, 'binary').then((content) => {
+      const workbook = XLSX.read(content, { type: 'binary' });
+      const sheetName = workbook.SheetNames[0];
+      const sheet = workbook.Sheets[sheetName];
+      const data = XLSX.utils.sheet_to_json(sheet, { defval: '' }); // Empty cells won't cause problems
+      return data;
+    });
+  });
