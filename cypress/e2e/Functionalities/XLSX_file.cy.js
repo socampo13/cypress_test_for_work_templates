@@ -17,7 +17,7 @@ describe('Read XLSX file', () => {
             expect(row).to.have.property('Status');
         });
 
-        const expectedNames = ['Andrés B', 'Otro Revisor', 'None', 'Andrés P', 'Viviana R']; //Validates if the values exists
+        const expectedNames = ['Andrés B', 'Otro Revisor', 'None', 'Andrés P', 'Viviana R']; //Validates if the values of rows exists
         data.forEach((row) => {
             if(row['Reviewed by'] !== ''){
                 expect(expectedNames).to.be.include(row['Reviewed by']);

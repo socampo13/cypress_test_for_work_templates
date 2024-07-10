@@ -34,6 +34,8 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// Command for reading the XLSX files using the xlsx library
 const XLSX = require('xlsx')
 
 Cypress.Commands.add('readExcelFile', (filePath) => {
