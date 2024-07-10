@@ -1,4 +1,4 @@
 /node_modules
 /cypress.json
 /assets
-/cypress\assets\Workflows Inventory.xlsx
+/cypress/assets/Workflows Inventory.xlsx
