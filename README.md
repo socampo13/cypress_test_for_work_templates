@@ -16,8 +16,14 @@ cd tu-repositorio
 npm install
 
 ### Uso
-Para ejecutar las pruebas, puedes usar los siguientes comandos:
+Para ejecutar las pruebas, puedes usar el siguiente comando:
 
 npm run cy:open
+
+En caso de no aparecer en el package.json, haz el siguiente cambio en los scripts del package.json:
+"scripts": {
+    "cy:open": "cypress open"
+  }
+Luego de guardar, puedes ejecutar el npm run cy:open en la línea de comandos para correr el framework. 
 
 Cypress documentation: https://docs.cypress.io/guides/overview/why-cypress
