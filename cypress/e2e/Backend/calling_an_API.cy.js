@@ -15,7 +15,7 @@ describe("Asynchronous testing with the PokeAPI", () => {
   });
 
   it("Should get information from multiple Pokemons and its abilities", () => {
-    const pokemonList = ["pikachu", "bulbasaur", "charmander"];
+    const pokemonList = ["pikachu", "bulbasaur", "charmander", "blastoise", "blaziken"];
 
     pokemonList.forEach((pokemon) => {
       const apiUrl = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
