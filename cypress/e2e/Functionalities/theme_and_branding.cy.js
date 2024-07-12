@@ -46,4 +46,14 @@ describe("Check that the size of fonts are correct", () => {
     cy.get(".button.button--tertiary")
       .should("have.css", "background", "rgb(60, 109, 168) none repeat scroll 0% 0% / auto padding-box border-box");
   });
+
+  it("Check that the color in outline buttons is correct", () => {
+   cy.visit(baseUrl);
+   cy.get(".span3.widget-span.widget-type-cell.dnd-column");
+   cy.get(".button.button--outline")
+     .should("have.css", "background", "rgba(95, 174, 228, 0) none repeat scroll 0% 0% / auto padding-box border-box");
+   cy.get('.button.button--outline#button_dnd_area-module-66')
+      .trigger('mouseover')
+      .should('have.css', 'background', 'rgba(95, 174, 228, 0) none repeat scroll 0% 0% / auto padding-box border-box');
+  });
 });
