@@ -1,7 +1,7 @@
 describe('Form submission test', () => {
     it('Should fill out and submit the form', () => {
       // Visit the page with the form
-      cy.visit('https://45594336.hs-sites.com/landing-page'); // Replace with the actual URL of your form
+      cy.visit('https://hubspot.assetguidancegroup.com/landing-page'); // Replace with the actual URL of your form
   
       // Fill out the form fields using different types of selectors
       cy.get('input[Name="firstname"]').type('John'); // Using the 'name' attribute
@@ -16,7 +16,7 @@ describe('Form submission test', () => {
       cy.get('input[type="checkbox"]').check({ force:true }); // Using the 'type' attribute
   
       // Submit the form
-      cy.get('.button[type="submit"]').click(); // Using the 'type' attribute for the submit button
+      cy.get('.hs-button').click(); // Using the 'type' attribute for the submit button
     });
   });
   

@@ -1,7 +1,7 @@
 describe('Test the Testimonial Slider', () => {
    it('Testimonial Slider module functionality', () => {
     
-      cy.visit('https://45594336.hs-sites.com/landing-page'); // Remember to change URL to the one you're using
+      cy.visit('https://hubspot.assetguidancegroup.com/landing-page'); // Remember to change URL to the one you're using
 
       cy.get('.testimonial-slider')
         .as('testimonial slider');
