@@ -6,7 +6,7 @@ describe("Check that the size of fonts are correct", () => {
     cy.get("h2").should("have.css", "font-size", "40px");
     cy.get("h3").should("have.css", "font-size", "36px");
     cy.get("h4").should("have.css", "font-size", "32px");
-    cy.get("h5").should("have.css", "font-size", "24px");
+    cy.get("h5").should("have.css", "font-size", "24px"); 
     cy.get("h6").should("have.css", "font-size", "20px");
   });
 
