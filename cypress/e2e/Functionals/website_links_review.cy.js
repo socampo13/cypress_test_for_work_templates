@@ -1,9 +1,9 @@
 describe("The Home Page", () => {
   it("successfully loads", () => {
-    cy.visit("https://spelmanlogistics.com"); // Add the site you want to review. Use the same format as it appears
+    cy.visit("https://12br.com"); // Add the site you want to review. Use the same format as it appears
 
     cy.get("a").each((link) => {
-      const href = link.prop("href");
+      const href = link.attr("href");
 
       if (href && href.startsWith("http")) {
         cy.request(href).then((resp) => {

@@ -15,7 +15,21 @@ describe('Check if there are animations in the page and if theyre working correc
       cy.get('.aos-init.aos-animate').should($el => {
          const rect = $el[0].getBoundingClientRect();
          expect(rect.top).to.be.closeTo(218, 5);
+         expect(rect.left).to.be.closeTo(372, 5);
       });
+
+      // Expected numbers can appear in the log with decimal numbers, round them to the closest number up high
+      // That's why it is used the , 5 to have an error bound
+   });
+
+   it('Should log the coordinates of the animated element', () => {
+      cy.wait(5000);
+
+      cy.get('.aos-init.aos-animate').then($el => {
+         const rect = $el[0].getBoundingClientRect();
+         cy.log(`Top: ${rect.top}, Left: ${rect.left}, Right: ${rect.right}, Bottom: ${rect.bottom}`)
+      });
+      // You can confirmate coordinates with this assertion
    });
 });
 
