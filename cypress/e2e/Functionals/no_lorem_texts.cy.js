@@ -1,5 +1,5 @@
 describe("Checks for lorem ipsum texts while visiting all pages", () => {
-  const urls = [
+  const urls = [ //Add the links that you want to test 
     "https://12br.com",
     "https://12br.com/about-us",
     "https://12br.com/our-services",
