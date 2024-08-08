@@ -1,15 +1,15 @@
 describe("Checks that the social network links exists and are working properly", () => {
   const baseUrl =
-    "https://7512626.hs-sites.com/rapid-pump-meter-service-co-style-guide";
+    "https://7512626.hs-sites.com/rapid-pump-meter-service-co-style-guide"; //Use the theme and branding template link of the PUBLISHED test page
 
   it("Clients logo is working and redirects to homepage", () => {
     cy.visit(baseUrl);
 
     cy.scrollTo("bottom");
 
-    cy.wait(3000);
+    cy.wait(3000); // This wait is used for making sure that all of the elements of the footer are loaded. This prevents false negatives
 
-    cy.get(".featured-image__image", { timeout: 10000 })
+    cy.get(".featured-image__image", { timeout: 10000 }) // Checks the logo/image, confirms it is clickable and that it contains a link inside the a attribute
       .should("exist")
       .and("be.visible")
       .parent("a")
@@ -17,10 +17,10 @@ describe("Checks that the social network links exists and are working properly",
       .then((href) => {
         expect(href).to.not.be.null;
 
-        // Haz clic en la imagen
+        // Clicks the logo/image
         cy.get(".featured-image__image").click();
 
-        cy.wait(3000);
+        cy.wait(3000); // Time to view that the redirection page is correct 
       });
   });
 
@@ -42,6 +42,10 @@ describe("Checks that the social network links exists and are working properly",
     cy.get(".social-links")
       .find("#linkedin-in3")
       .should("exist");
+
+    /* cy.get(".social-links")
+      .find("#linkedin-in3")
+      .should("exist"); */ // Use only if there are more logos needed to review 
   });
 
   it("Facebook link is working correctly", () => {
